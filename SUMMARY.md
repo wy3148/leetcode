@@ -8,6 +8,9 @@
 * [Permutations](basic-coding-style/15.-permutations.md)
 * [Permutations II](basic-coding-style/permutations-ii.md)
 
+## Binary search
+* [2D matrix search](binary-search/2D-matrix-search.md)
+
 ## Binary tree, Divide and Conquer
 
 * [480 binary tree path](binary-tree-divide-and-conquer/untitled.md)
@@ -94,4 +97,3 @@
 * [107. Word Break](dfs/107.-word-break.md)
 * [string permuation](dfs/string-permuation.md)
 * [next permutation](dfs/next-permutation.md)
-

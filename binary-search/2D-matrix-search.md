@@ -117,46 +117,36 @@ public:
      * @return: a boolean, indicate whether matrix contains target
      */
     bool searchMatrix(vector<vector<int>> &matrix, int target) {
+        // write your code here
+        
+        //take the matrix as a flat std::array;
+        //index from 0 ~  n*m - 1
+        //position has follow relation, row = mid/n, column = mid % n
+        
         int m = matrix.size();
         if (m == 0) return false;
+        
         int n = matrix[0].size();
         
         int start = 0;
-        int end = m - 1;
+        int end = m * n - 1;
         
-        while(start + 1 < end){
-            int mid = (end- start)/2 + start;
-            if (matrix[mid][0] == target) return true;
-            if (matrix[mid][0] > target){
-                end = mid;
-            }else{
-                start = mid;
-            }
-        }
-        
-        if (matrix[start][0] == target ||
-        matrix[end][0] == target) return true;
-        
-        int row = start;
-        if (target > matrix[end][0]){
-            row = end;
-        }
-        
-        start = 0;
-        end = n - 1;
-        while(start + 1 < end){
-            int mid = (end - start) /2 + start;
-            if(matrix[row][mid] == target) return true;
+        while ( start + 1 < end){
+            int mid = start + (end - start) / 2;
             
-            if(matrix[row][mid] > target){
-                end = mid;
+            int r = mid / n;
+            int c = mid % n;
+            
+            if (matrix[r][c] == target) return true;
+            if (matrix[r][c] > target){
+                end = mid - 1;
             }else{
-                start = mid;
+                start = mid + 1;
             }
         }
         
-        if (matrix[row][start] == target ||
-        matrix[row][end] == target) return true;
+        if (matrix[start/n][start%n] == target) return true;
+        if (matrix[end/n][end%n] == target) return true;
         return false;
     }
 };
