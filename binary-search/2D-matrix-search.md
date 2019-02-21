@@ -77,3 +77,87 @@ int searchMatrix(vector<vector<int>> &matrix, int target) {
 }
 };```
 
+
+Description
+中文
+English
+Write an efficient algorithm that searches for a value in an m x n matrix.
+
+This matrix has the following properties:
+
+Integers in each row are sorted from left to right.
+The first integer of each row is greater than the last integer of the previous row.
+Have you met this question in a real interview?  
+Example
+Example 1:
+	Input:  [[5]],2
+	Output: false
+	
+	Explanation: 
+	false if not included.
+	
+Example 2:
+	Input:  [
+    [1, 3, 5, 7],
+    [10, 11, 16, 20],
+    [23, 30, 34, 50]
+],3
+	Output: true
+	
+	Explanation: 
+	return true if included.
+	
+	
+```cpp
+class Solution {
+public:
+    /**
+     * @param matrix: matrix, a list of lists of integers
+     * @param target: An integer
+     * @return: a boolean, indicate whether matrix contains target
+     */
+    bool searchMatrix(vector<vector<int>> &matrix, int target) {
+        int m = matrix.size();
+        if (m == 0) return false;
+        int n = matrix[0].size();
+        
+        int start = 0;
+        int end = m - 1;
+        
+        while(start + 1 < end){
+            int mid = (end- start)/2 + start;
+            if (matrix[mid][0] == target) return true;
+            if (matrix[mid][0] > target){
+                end = mid;
+            }else{
+                start = mid;
+            }
+        }
+        
+        if (matrix[start][0] == target ||
+        matrix[end][0] == target) return true;
+        
+        int row = start;
+        if (target > matrix[end][0]){
+            row = end;
+        }
+        
+        start = 0;
+        end = n - 1;
+        while(start + 1 < end){
+            int mid = (end - start) /2 + start;
+            if(matrix[row][mid] == target) return true;
+            
+            if(matrix[row][mid] > target){
+                end = mid;
+            }else{
+                start = mid;
+            }
+        }
+        
+        if (matrix[row][start] == target ||
+        matrix[row][end] == target) return true;
+        return false;
+    }
+};
+```
