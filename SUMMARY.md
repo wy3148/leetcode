@@ -10,6 +10,7 @@
 
 ## Binary search
 * [2D matrix search](binary-search/2D-matrix-search.md)
+* [612 K-Closest Points](binary-search/612.K-Closest-Points.md)
 
 ## Binary tree, Divide and Conquer
 
