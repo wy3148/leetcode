@@ -9,8 +9,9 @@
 * [Permutations II](basic-coding-style/permutations-ii.md)
 
 ## Binary search
-* [2D matrix search](binary-search/2D-matrix-search.md)
-* [612 K-Closest Points](binary-search/612.K-Closest-Points.md)
+
+* [2D matrix search](binary-search/2d-matrix-search.md)
+* [612 K-Closest Points](binary-search/612.k-closest-points.md)
 
 ## Binary tree, Divide and Conquer
 
@@ -98,3 +99,8 @@
 * [107. Word Break](dfs/107.-word-break.md)
 * [string permuation](dfs/string-permuation.md)
 * [next permutation](dfs/next-permutation.md)
+
+## Binary search
+
+* [Back 612. K Closest Points](binary-search-1/back-612.-k-closest-points.md)
+
