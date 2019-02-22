@@ -1,8 +1,3 @@
----
-description: >-
-https://www.lintcode.com/problem/search-a-2d-matrix-ii/description
----
-
 # 38 2D matrix search
 
 Description
