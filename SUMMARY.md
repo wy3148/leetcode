@@ -100,7 +100,3 @@
 * [string permuation](dfs/string-permuation.md)
 * [next permutation](dfs/next-permutation.md)
 
-## Binary search
-
-* [Back 612. K Closest Points](binary-search-1/back-612.-k-closest-points.md)
-
