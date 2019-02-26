@@ -1,6 +1,6 @@
 # Table of contents
 
-* [leetcode&lintcode notes](README.md)
+* [lintcode](README.md)
 
 ## Basic coding style
 

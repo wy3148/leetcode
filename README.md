@@ -1,2 +1,2 @@
-# leetcode&lintcode notes
+# lintcode
 
