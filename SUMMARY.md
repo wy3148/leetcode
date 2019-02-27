@@ -12,6 +12,7 @@
 
 * [2D matrix search](binary-search/2d-matrix-search.md)
 * [612 K-Closest Points](binary-search/612.k-closest-points.md)
+* [34 Find First and Last Position of Element in Sorted Array](binary-search/34-find-first-and-last-position-of-element-in-sorted-array.md)
 
 ## Binary tree, Divide and Conquer
 
