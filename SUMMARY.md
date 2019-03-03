@@ -16,6 +16,7 @@
 * [585 maximum number in mountain](binary-search/585-maximum-number-in-mountain.md)
 * [447 search in a big sorted array](binary-search/447-search-in-a-big-sorted-array.md)
 * [159 Find the minimum in rotated array](binary-search/159-find-the-minimum-in-rotated-array.md)
+* [75. Find Peak Element](binary-search/75.-find-peak-element.md)
 
 ## Binary tree, Divide and Conquer
 
