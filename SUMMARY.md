@@ -13,6 +13,9 @@
 * [2D matrix search](binary-search/2d-matrix-search.md)
 * [612 K-Closest Points](binary-search/612.k-closest-points.md)
 * [34 Find First and Last Position of Element in Sorted Array](binary-search/34-find-first-and-last-position-of-element-in-sorted-array.md)
+* [585 maximum number in mountain](binary-search/585-maximum-number-in-mountain.md)
+* [447 search in a big sorted array](binary-search/447-search-in-a-big-sorted-array.md)
+* [159 Find the minimum in rotated array](binary-search/159-find-the-minimum-in-rotated-array.md)
 
 ## Binary tree, Divide and Conquer
 
