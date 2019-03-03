@@ -13,6 +13,13 @@ Input: \[ \[1, 3, 5, 7\], \[2, 4, 7, 8\], \[3, 5, 9, 10\] \] target = 3 Output:2
 
 Notes: search from left corner to the right up corner, each position may have one of two directions to move.
 
+the 'mid' position has following relation of row and column.
+
+```text
+            int r = mid / n;
+            int c = mid % n;
+```
+
 ```cpp
 class Solution {
 public:
