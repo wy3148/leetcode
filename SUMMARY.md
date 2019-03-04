@@ -18,6 +18,7 @@
 * [159 Find the minimum in rotated array](binary-search/159-find-the-minimum-in-rotated-array.md)
 * [75. Find Peak Element](binary-search/75.-find-peak-element.md)
 * [74 First Bad Version](binary-search/74-first-bad-version.md)
+* [141 sqrt\(x\)](binary-search/141-sqrt-x.md)
 
 ## Binary tree, Divide and Conquer
 
