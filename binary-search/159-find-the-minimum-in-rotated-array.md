@@ -1,4 +1,4 @@
-# 159 Find the minimum in rotated array
+# Find the minimum in rotated array
 
 #### Description
 
@@ -61,4 +61,60 @@ func findMin (nums []int) int {
 }
 
 ```
+
+160. Find the minimum in rotated sorted array
+
+O\(n\)
+
+```cpp
+ import("math")
+ 
+func findMin (nums []int) int {
+    // write your code here
+    
+    ret := math.MaxInt32
+    
+    for _, v := range nums{
+        if v < ret{
+            ret  = v
+        }
+    }
+    return ret 
+}
+```
+
+```cpp
+/**
+ * @param nums: a rotated sorted array
+ * @return: the minimum number in the array
+ */
+func findMin (nums []int) int {
+    // write your code here
+    start := 0
+    end := len(nums) -1 
+    
+    for start + 1 < end {
+        
+        mid := (start + end) /2 
+        
+        if nums[mid] == nums[end]{
+            end--
+        }else if nums[mid] < nums[end]{
+            //middle is less than end, meaning 
+            //the minimum must be on left side
+            end = mid
+        }else{
+            start = mid
+        }
+    }
+    
+    if nums[start] < nums[end]{
+        return nums[start]
+    }
+    return nums[end]
+}
+
+```
+
+
 
