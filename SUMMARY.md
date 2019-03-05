@@ -19,6 +19,7 @@
 * [75. Find Peak Element](binary-search/75.-find-peak-element.md)
 * [74 First Bad Version](binary-search/74-first-bad-version.md)
 * [141 sqrt\(x\)](binary-search/141-sqrt-x.md)
+* [62 Search in rotated sorted array](binary-search/62-search-in-rotated-sorted-array.md)
 
 ## Binary tree, Divide and Conquer
 
@@ -42,6 +43,7 @@
 * [165. Merge Two Sorted Lists](linked-list-and-array/untitled-1.md)
 * [138. Subarray Sum](linked-list-and-array/untitled-2.md)
 * [41. Maximum Subarray](linked-list-and-array/untitled-3.md)
+* [Maximum Average Subarray II](linked-list-and-array/maximum-average-subarray-ii.md)
 
 ## two pointers
 
