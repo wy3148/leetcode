@@ -78,3 +78,45 @@ func searchRange(nums []int, target int) []int {
 }
 ```
 
+more simple code
+
+```cpp
+func searchRange(nums []int, target int) []int {
+    if len(nums) == 0 {
+        return []int{-1,-1}
+    }
+    
+    var res []int
+    
+    start := 0
+    end := len(nums) - 1
+    
+    for start + 1 < end{
+        
+        mid := (start + end) / 2
+        
+        if nums[mid] >= target{
+            end = mid
+        }else{
+            start = mid
+        }
+    }
+    
+    for start < len(nums){
+        if nums[start] == target{
+            res = append(res,start)
+            start++
+        }else if nums[start] < target{
+            start++
+        }else{
+            break
+        }
+    }
+    
+    if len(res) == 0{
+        return []int{-1,-1}
+    }
+    return []int{res[0],res[len(res) - 1]}    
+}
+```
+
