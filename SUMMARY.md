@@ -23,6 +23,7 @@
 * [460 Find K Closest Elements](binary-search/460.md)
 * [414. Divide Two Integers](binary-search/414.-divide-two-integers.md)
 * [61 Search for a Range](binary-search/61-search-for-a-range.md)
+* [600 Smallest Rectangle Enclosing Black Pixels](binary-search/600-smallest-rectangle-enclosing-black-pixels.md)
 
 ## Binary tree, Divide and Conquer
 
