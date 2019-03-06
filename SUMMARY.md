@@ -21,6 +21,7 @@
 * [141 sqrt\(x\)](binary-search/141-sqrt-x.md)
 * [62 Search in rotated sorted array](binary-search/62-search-in-rotated-sorted-array.md)
 * [460 Find K Closest Elements](binary-search/460.md)
+* [414. Divide Two Integers](binary-search/414.-divide-two-integers.md)
 
 ## Binary tree, Divide and Conquer
 
