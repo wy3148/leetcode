@@ -65,3 +65,48 @@ public:
 };
 ```
 
+![](../.gitbook/assets/autodraw-07_03_2019-4.png)
+
+suppose we find the index i and j , that sum\(i j \) = 0;
+
+then sum\(0, i - 1 \)  = sum\(0, j\) 
+
+so we actually just need to calculate the subarray sum from index 0
+
+to i.
+
+
+
+```go
+class Solution {
+public:
+    /**
+     * @param nums: A list of integers
+     * @return: A list of integers includes the index of the first number and the index of the last number
+     */
+    vector<int> subarraySum(vector<int> &nums) {
+        map<int,int> data;
+        vector<int> ret;
+        int tmp = 0;
+        
+        for (int i= 0; i < nums.size(); i++){
+            tmp += nums[i];
+            
+            if (tmp == 0){
+                ret.push_back(0);
+                ret.push_back(i);
+                return ret;
+            }
+            
+            if (data.find(tmp) != data.end()){
+                ret.push_back(data[tmp] + 1);
+                ret.push_back(i);   
+                return ret;
+            }
+            data[tmp] = i;
+        }
+        return ret;
+    }
+};
+```
+

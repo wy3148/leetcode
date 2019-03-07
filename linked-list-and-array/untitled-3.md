@@ -23,6 +23,8 @@ Given the array `[1,2,3,4]`, the contiguous subarray `[1,2,3,4]` has the largest
 
 Can you do it in time complexity O\(n\)?
 
+Note: suppose current subarray is less than 0, we don't need to involve it, we start from next position to calculate a new subarray, which start from 0 value.
+
 ```text
 class Solution {
 public:
