@@ -51,6 +51,7 @@
 * [41. Maximum Subarray](linked-list-and-array/untitled-3.md)
 * [Maximum Average Subarray II](linked-list-and-array/maximum-average-subarray-ii.md)
 * [Subarray Sum Equals K \(leetcode\)](linked-list-and-array/subarray-sum-equals-k-leetcode.md)
+* [105  Copy List with Random Pointer](linked-list-and-array/105-copy-list-with-random-pointer.md)
 
 ## two pointers
 
