@@ -55,6 +55,7 @@
 * [102 Linked list cycle](linked-list-and-array/102-linked-list-cycle.md)
 * [98. Sort List](linked-list-and-array/98.-sort-list.md)
 * [450 reverse K group linked list](linked-list-and-array/450-reverse-k-group-linked-list.md)
+* [Back 65. Median of two Sorted Arrays](linked-list-and-array/back-65.-median-of-two-sorted-arrays.md)
 
 ## two pointers
 
