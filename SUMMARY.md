@@ -58,6 +58,7 @@
 * [Back 65. Median of two Sorted Arrays](linked-list-and-array/back-65.-median-of-two-sorted-arrays.md)
 * [617 Maximum Average of subarray \(K length\)](linked-list-and-array/617-maximum-average-of-subarray-k-length.md)
 * [191. Maximum Product Subarray](linked-list-and-array/191.-maximum-product-subarray.md)
+* [547&548 intersection of array](linked-list-and-array/547-and-548-intersection-of-array.md)
 
 ## two pointers
 
