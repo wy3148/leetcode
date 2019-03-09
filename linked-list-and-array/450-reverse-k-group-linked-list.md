@@ -88,3 +88,42 @@ public:
 };
 ```
 
+basic reverse of linked list, none-recursive function,
+
+```cpp
+/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+ */
+
+/**
+ * @param head: n
+ * @return: The new head of reversed linked list.
+ */
+func reverse (head *ListNode) *ListNode {
+// write your code here
+    if head == nil || head.Next == nil {
+        return head
+    }
+    
+    var prev *ListNode
+    var next *ListNode
+    
+    cur := head
+    //n1,n2,n3 
+    //cur
+    
+    for cur != nil{
+        next = cur.Next
+        cur.Next = prev
+        prev = cur 
+        cur = next
+    }
+    return prev 
+}
+
+```
+
