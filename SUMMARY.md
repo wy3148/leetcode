@@ -59,6 +59,7 @@
 * [617 Maximum Average of subarray \(K length\)](linked-list-and-array/617-maximum-average-of-subarray-k-length.md)
 * [191. Maximum Product Subarray](linked-list-and-array/191.-maximum-product-subarray.md)
 * [547&548 intersection of array](linked-list-and-array/547-and-548-intersection-of-array.md)
+* [96 partition list](linked-list-and-array/96-partition-list.md)
 
 ## two pointers
 
