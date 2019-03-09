@@ -56,6 +56,8 @@
 * [98. Sort List](linked-list-and-array/98.-sort-list.md)
 * [450 reverse K group linked list](linked-list-and-array/450-reverse-k-group-linked-list.md)
 * [Back 65. Median of two Sorted Arrays](linked-list-and-array/back-65.-median-of-two-sorted-arrays.md)
+* [617 Maximum Average of subarray \(K length\)](linked-list-and-array/617-maximum-average-of-subarray-k-length.md)
+* [191. Maximum Product Subarray](linked-list-and-array/191.-maximum-product-subarray.md)
 
 ## two pointers
 
