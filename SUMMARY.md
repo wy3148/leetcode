@@ -64,7 +64,9 @@
 ## two pointers
 
 * [two pointers template](two-pointers/two-pointers-template.md)
+* [604 window sum](two-pointers/604-window-sum.md)
 * [607. Two Sum III - Data structure design](two-pointers/untitled.md)
+* [521 remove duplicate in array](two-pointers/521-remove-duplicate-in-array.md)
 * [143 sort colors](two-pointers/143-sort-colors.md)
 * [3sum --zero](two-pointers/3sum-zero.md)
 * [31. Partition Array](two-pointers/31.-partition-array.md)
@@ -73,11 +75,10 @@
 * [148 sort colors](two-pointers/148-sort-colors.md)
 * [59 3Sum Closest](two-pointers/59-3sum-closest.md)
 * [918. 3Sum Smaller](two-pointers/918.-3sum-smaller.md)
-* [539. Move Zeroes](two-pointers/539.-move-zeroes-1.md)
 * [31 partition array](two-pointers/31-partition-array.md)
 * [57 3sum --zero](two-pointers/57-3sum-zero.md)
 * [143 sort colors II](two-pointers/143-sort-colors-ii.md)
-* [608. Two Sum II - Input array is sorted](two-pointers/608.-two-sum-ii-input-array-is-sorted.md)
+* [Two Sum Problems](two-pointers/608.-two-sum-ii-input-array-is-sorted.md)
 * [382. Triangle Count](two-pointers/382.-triangle-count.md)
 
 ## Data structure
