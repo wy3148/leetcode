@@ -69,17 +69,18 @@
 * [521 remove duplicate in array](two-pointers/521-remove-duplicate-in-array.md)
 * [143 sort colors](two-pointers/143-sort-colors.md)
 * [3sum --zero](two-pointers/3sum-zero.md)
-* [31. Partition Array](two-pointers/31.-partition-array.md)
 * [539. Move Zeroes](two-pointers/539.-move-zeroes.md)
 * [415 Valid Palinedrome](two-pointers/415-valid-palinedrome.md)
 * [148 sort colors](two-pointers/148-sort-colors.md)
 * [59 3Sum Closest](two-pointers/59-3sum-closest.md)
 * [918. 3Sum Smaller](two-pointers/918.-3sum-smaller.md)
-* [31 partition array](two-pointers/31-partition-array.md)
-* [57 3sum --zero](two-pointers/57-3sum-zero.md)
+* [31&625 partition array](two-pointers/31-partition-array.md)
+* [57&59 3sum](two-pointers/57-3sum-zero.md)
 * [143 sort colors II](two-pointers/143-sort-colors-ii.md)
 * [Two Sum Problems](two-pointers/608.-two-sum-ii-input-array-is-sorted.md)
 * [382. Triangle Count](two-pointers/382.-triangle-count.md)
+* [610 Two Sum - Difference equals to target](two-pointers/610-two-sum-difference-equals-to-target.md)
+* [Kth smallest element in un-sorted array](two-pointers/kth-smallest-element-in-un-sorted-array.md)
 
 ## Data structure
 

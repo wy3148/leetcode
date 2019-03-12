@@ -2,7 +2,7 @@
 description: 'https://www.lintcode.com/problem/partition-array/description'
 ---
 
-# 31 partition array
+# 31&625 partition array
 
 
 
@@ -51,6 +51,8 @@ Can you partition the array in-place and in O\(n\)?
 
 Note: the if condition is i &lt;= j,  it is required to return first index of element which is &gt;=k.
 
+![](../.gitbook/assets/autodraw-12_03_2019.png)
+
 ```cpp
 class Solution {
 public:
@@ -80,4 +82,101 @@ public:
     }
 };
 ```
+
+```go
+/**
+ * @param nums: The integer array you should partition
+ * @param k: An integer
+ * @return: The index after partition
+ */
+func partitionArray (nums []int, k int) int {
+    // write your code here
+    if len(nums) == 0{
+        return 0
+    }
+    
+    start := 0
+    end := len(nums) -1 
+    
+    for start <= end{
+        
+        for end >= 0 && nums[end]>= k{
+            end--
+        }
+        
+        for start < len(nums) && nums[start] < k {
+            start++
+        }
+        
+        for start <= end{
+            nums[start],nums[end] = nums[end],nums[start]
+            start++
+            end--
+        }
+    }
+    return start
+}
+
+```
+
+#### \[LintCode\] 625 Partition Array II 解题报告
+
+**Description**  
+Partition an unsorted integer array into three parts:  
+  
+The front part &lt; low  
+The middle part &gt;= low & &lt;= high  
+The tail part &gt; high  
+Return any of the possible solutions.  
+  
+  
+**Notice**  
+low &lt;= high in all testcases.  
+  
+**Example**  
+Given \[4,3,4,1,2,3,1,2\], and low = 2 and high = 3.  
+  
+Change to \[1,1,2,3,2,3,4,4\].  
+  
+\(\[1,1,2,2,3,3,4,4\] is also a correct answer, but \[1,2,1,2,3,3,4,4\] is not\)
+
+
+
+'i' points to the old array, basic idea is, 
+
+if start &lt; i, we need to switch with i, i++, start++;
+
+//start changes, i could change or not change position.
+
+```go
+// Given [4,3,4,1,2,3,1,2], and low = 2 and high = 3.
+// Change to [1,1,2,3,2,3,4,4].
+func partitionV2(nums []int, low int, high int) []int {
+
+	if len(nums) == 0 {
+		return nums
+	}
+
+	start := 0
+	end := len(nums) - 1
+	i := 0
+
+	for start <= end {
+		if nums[start] < low {
+			nums[start], nums[i] = nums[i], nums[start]
+			start++
+			i++
+		} else if nums[start] > high {
+			nums[start], nums[end] = nums[end], nums[start]
+			end--
+		} else {
+			start++
+		}
+	}
+	return nums
+}
+
+```
+
+
 
