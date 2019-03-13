@@ -122,7 +122,7 @@ func partitionArray (nums []int, k int) int {
 #### \[LintCode\] 625 Partition Array II 解题报告
 
 **Description**  
-Partition an unsorted integer array into three parts:  
+Partition an unsorted `integer` array into three parts:  
   
 The front part &lt; low  
 The middle part &gt;= low & &lt;= high  

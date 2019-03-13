@@ -81,6 +81,7 @@
 * [382. Triangle Count](two-pointers/382.-triangle-count.md)
 * [610 Two Sum - Difference equals to target](two-pointers/610-two-sum-difference-equals-to-target.md)
 * [Kth smallest element in un-sorted array](two-pointers/kth-smallest-element-in-un-sorted-array.md)
+* [58 4sum](two-pointers/58-4sum.md)
 
 ## Data structure
 
