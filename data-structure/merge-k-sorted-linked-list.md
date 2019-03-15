@@ -28,7 +28,9 @@ return `-1->2->4->null`.
 
 solution:
 
-use priprity\_queue, push all list nodes and then pop up them to compose a new linked list.
+1 use priprity\_queue, push all list nodes and then pop up them to compose a new linked list.
+
+2 merge two linked list firstly, and continue to merge to the end list.
 
 ```cpp
 /**
@@ -89,6 +91,78 @@ public:
 ```
 
 
+
+```cpp
+/**
+ * Definition of ListNode
+ * class ListNode {
+ * public:
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int val) {
+ *         this->val = val;
+ *         this->next = NULL;
+ *     }
+ * }
+ */
+class Solution {
+public:
+
+    ListNode* mergeTwo(ListNode* l1, ListNode* l2){
+        if (l1 == nullptr || l2 == nullptr){
+            return l1 == nullptr ? l2:l1;
+        }
+        ListNode* head = nullptr;
+        ListNode* cur = nullptr;
+        
+        while (l1 && l2 ){
+            ListNode* tmp  = nullptr;
+            
+           if(l1->val < l2->val){
+               tmp = l1;
+               l1 = l1->next;
+            }else{
+                tmp = l2;
+                l2 = l2->next;
+            }
+            
+            if (head != nullptr){
+                cur->next = tmp;
+                cur = tmp;
+            }else{
+                cur = head = tmp;
+            }
+        }
+        
+        while(l1){
+            cur->next = l1;
+            cur = l1;
+            l1 = l1->next;
+        }
+
+        while(l2){
+            cur->next = l2;
+            cur = l2;
+            l2 = l2->next;
+        }    
+        return head;
+    }
+    
+    /**
+     * @param lists: a list of ListNode
+     * @return: The head of one sorted list.
+     */
+    ListNode *mergeKLists(vector<ListNode *> &lists) {
+        int i = 0;
+        ListNode* prev = nullptr;
+        while(i < lists.size()) {
+            prev = mergeTwo(lists[i],prev);
+            i++;
+        }
+        return prev;
+    }
+};
+```
 
 
 

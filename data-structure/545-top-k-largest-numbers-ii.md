@@ -74,3 +74,61 @@ public:
 };
 ```
 
+use 'priority\_queue' max-heap to store and update K largest numbers, when call Topk\(\) function, pop these elements and then pop back
+
+```cpp
+
+class Solution {
+
+public:
+
+    class Compare{
+    public:
+         bool operator()(int& a, int& b){
+              return a > b;
+         }
+    };
+
+    int numK;    
+    priority_queue<int,vector<int>, Compare> q;
+
+    /*
+    * @param k: An integer
+    */Solution(int k) {
+        // do intialization if necessary
+        numK =k;
+    }
+    
+    /*
+     * @param num: Number to be added
+     * @return: nothing
+     */
+    void add(int num) {
+        // write your code here
+        q.push(num);
+        while(q.size() > numK){
+            q.pop();
+        }
+    }
+
+    /*
+     * @return: Top k element
+     */
+    vector<int> topk() {
+        // write your code here
+        vector<int> ret;
+        
+        //we can clone the existing queue, and pop up
+        //or we can pop from the existing queue, and pop
+        //them back
+        priority_queue<int,vector<int>, Compare> cloneQ(q);
+        while(cloneQ.size() > 0){
+            ret.insert(ret.begin(),cloneQ.top()); cloneQ.pop();
+        }
+        return ret;
+    }
+};
+```
+
+
+
