@@ -88,7 +88,7 @@
 * [128 hash function](data-structure/hash-function.md)
 * [129 rehashing](data-structure/rehashing.md)
 * [104 merge k sorted linked list](data-structure/merge-k-sorted-linked-list.md)
-* [4 ugly number-II](data-structure/ugly-number.md)
+* [ugly number-II](data-structure/ugly-number.md)
 * [551 Nested List Weight Sum](data-structure/nested-list-weight-sum.md)
 * [575 Decode String](data-structure/575-decode-string.md)
 * [540. Zigzag Iterator](data-structure/540.-zigzag-iterator.md)
@@ -101,6 +101,7 @@
 * [124. Longest Consecutive Sequence](data-structure/124.-longest-consecutive-sequence.md)
 * [130 Heapify](data-structure/130-heapify.md)
 * [495. Implement Stack](data-structure/495.-implement-stack.md)
+* [134 LRU cache](data-structure/134-lru-cache.md)
 
 ## BFS
 

@@ -1,10 +1,75 @@
----
-description: 'https://www.lintcode.com/problem/ugly-number-ii/description'
----
+# ugly number-II
 
-# 4 ugly number-II
+[https://www.lintcode.com/problem/ugly-number-ii/description](https://www.lintcode.com/problem/ugly-number-ii/description)
+
+[https://www.lintcode.com/problem/ugly-number/description](https://www.lintcode.com/problem/ugly-number/description)
 
 
+
+
+
+#### Description
+
+中文English
+
+Write a program to check whether a given number is an `ugly` number\`.
+
+`Ugly numbers` are positive numbers whose prime factors only include `2`, `3`, `5`. For example, `6`, `8` are ugly while `14` is not ugly since it includes another prime factor `7`.
+
+Note that `1` is typically treated as an ugly number.Have you met this question in a real interview?  YesProblem Correction
+
+#### Example
+
+Example 1:
+
+```text
+Input: num = 8 
+Output: true
+Explanation:
+8=2*2*2
+```
+
+Example 2:
+
+```text
+Input: num = 14 
+Output: false
+Explanation:
+14=2*7 
+```
+
+#### Related Problems
+
+if a number is ugly number, it must be always multiplier of any of\(2,3,5\) ;
+
+```go
+/**
+ * @param num: An integer
+ * @return: true if num is an ugly number or false
+ */
+func isUgly (num int) bool {
+    if num <=0 {
+        return false
+    }else if num <= 5 {
+        return true
+    }
+    
+    //check if the num only has factor of 2,3,5
+    for num % 2 == 0 {
+        num = num/2
+    }
+    
+    for num % 3 == 0 {
+        num = num/3
+    }    
+
+    for num % 5 == 0 {
+        num = num/5
+    }
+    
+    return num == 1 
+}
+```
 
 #### Description
 
