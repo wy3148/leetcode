@@ -26,6 +26,10 @@ Have you met this question in a real interview?  YesProblem Correction
 
 * Return any of them.
 
+![priority queue shiftup](../.gitbook/assets/autodraw-16_03_2019.png)
+
+![priority queue shiftdown](../.gitbook/assets/autodraw-16_03_2019-1.png)
+
 #### Example
 
 Given \[3,2,1,4,5\], return \[1,2,3,4,5\] or any legal heap array.

@@ -61,3 +61,41 @@ public:
  */
 ```
 
+also we can use 'queue',
+
+```cpp
+class Vector2D {
+public:
+
+    std::queue<int> q;
+    
+    Vector2D(vector<vector<int>>& vec2d) {
+        // Initialize your data structure here
+        for(auto a : vec2d){
+            for(auto v : a){
+                q.push(v);
+            }
+        }
+    }
+    
+    int next() {
+        if (!q.empty()){
+            int t = q.front();
+            q.pop();
+            return t;
+        }
+        return -1;
+    }
+
+    bool hasNext() {
+        return !q.empty();
+    }
+};
+
+/**
+ * Your Vector2D object will be instantiated and called as such:
+ * Vector2D i(vec2d);
+ * while (i.hasNext()) cout << i.next();
+ */
+```
+
