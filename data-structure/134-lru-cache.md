@@ -127,3 +127,225 @@ get(4)
 >> 4
 ```
 
+Several ways
+
+![](../.gitbook/assets/autodraw-18_03_2019.png)
+
+
+
+```cpp
+#include <list>
+using namespace std;
+
+class LFUCache {
+public:
+
+    struct Node{
+        int key;
+        int value;
+        int freq;
+        Node(){
+        }
+        Node(int k, int v, int f){
+            key = k;
+            value = v;
+            freq = f;
+        }
+    };
+
+    int capSize;
+    map<int,Node> record;
+    std::list<Node> nodes;
+
+    /*
+    * @param capacity: An integer
+    */LFUCache(int capacity) {
+        // do intialization if necessary
+        capSize = capacity;
+    }
+    
+    void insert(Node& n){
+        bool insert = true;
+        for (auto i = nodes.begin(); i != nodes.end(); i++){
+            if (n.freq >= (*i).freq){
+                insert = false;
+                nodes.insert(i,n);
+                break;
+            }
+        }
+        
+        if (insert){
+            nodes.push_back(n);   
+        }        
+    }
+    
+    /*
+     * @param key: An integer
+     * @param value: An integer
+     * @return: nothing
+     */
+    void set(int key, int value) {
+        // write your code here
+        if (record.find(key) == record.end()){
+            Node n(key,value,1);
+            record[key] = n;
+            
+            if (record.size() > capSize){
+                Node last = nodes.back();
+                nodes.pop_back();
+                record.erase(last.key);
+                insert(n);
+            }else{
+                insert(n);
+            }
+        }else{
+            Node& n = record[key];
+            n.freq++;
+            n.value = value;
+            for (auto i = nodes.begin(); i != nodes.end(); i++){
+                if ((*i).key == key){
+                    nodes.erase(i);
+                    break;
+                }
+            }
+            insert(n);
+        }
+    }
+
+    /*
+     * @param key: An integer
+     * @return: An integer
+     */
+    int get(int key) {
+        // write your code here
+        if (record.find(key) == record.end()) return -1;
+        Node& n = record[key];
+        
+        for (auto i = nodes.begin(); i != nodes.end(); i++){
+            if ((*i).key == key){
+                nodes.erase(i);
+                break;
+            }
+        }
+        
+        n.freq++;
+        Node node(n.key,n.value,n.freq);
+        insert(n);
+        
+        return n.value;
+    }
+};
+```
+
+hashmap to recored the frequency and nodes relations
+
+![](../.gitbook/assets/autodraw-18_03_2019-1.png)
+
+```cpp
+class LFUCache {
+public:
+
+    struct Node{
+        int key;
+        int value;
+        int freq;
+        Node(){
+        }
+        Node(int k, int v, int f){
+            key = k;
+            value = v;
+            freq = f;
+        }
+    };
+
+    int capSize;
+    map<int,Node> record;
+    map<int,std::vector<Node>> freqData;
+    
+    /*
+    * @param capacity: An integer
+    */LFUCache(int capacity) {
+        // do intialization if necessary
+        capSize = capacity;
+    }
+    
+    void removeLeastUsed(){
+        int minFreq = INT_MAX; 
+        for (auto p : freqData){
+            
+            //make sure the value of list is not empty
+            if (minFreq > p.first && p.second.size() > 0){
+                minFreq = p.first;
+            }
+        }
+        vector<Node>& nodes = freqData[minFreq];
+        Node& last = nodes.back();        
+        record.erase(last.key);
+        nodes.pop_back();
+    }
+    
+    void removeNodeFromFreqData(Node& n){
+        vector<Node>& nodes = freqData[n.freq];
+        for (int i = 0; i < nodes.size(); i++){
+            if (nodes[i].key == n.key){
+                nodes.erase(nodes.begin() + i);
+                break;
+            }
+        }
+    }
+    
+    /*
+     * @param key: An integer
+     * @param value: An integer
+     * @return: nothing
+     */
+    void set(int key, int value) {
+        // write your code here
+        if (record.find(key) == record.end()){
+            Node n (key,value,1);
+            record[key] = n;
+            
+            if (record.size() > capSize) {
+                removeLeastUsed();
+            }
+
+            vector<Node>& freqNodes = freqData[1];
+            freqNodes.insert(freqNodes.begin(),n);
+
+        }else{
+             Node& n = record[key];
+             n.value = value;
+             removeNodeFromFreqData(n);
+             n.freq++;
+             vector<Node>& nodes = freqData[n.freq];
+             nodes.insert(nodes.begin(),n);
+             freqData[n.freq] = nodes;
+        }
+    }
+
+    /*
+     * @param key: An integer
+     * @return: An integer
+     */
+    int get(int key) {
+        // write your code here
+        if (record.find(key) == record.end()) return -1;
+        Node& n = record[key];
+        
+        vector<Node>& nodes = freqData[n.freq];
+        for(int i = 0; i < nodes.size();i++){
+            if (nodes[i].key == key) {
+                nodes.erase(nodes.begin() + i);
+                break;
+            }
+        }
+        
+        n.freq++;
+        vector<Node>& freqNodes = freqData[n.freq];
+        freqNodes.insert(freqNodes.begin(),n);
+        
+        return n.value;
+    }
+};
+```
+
