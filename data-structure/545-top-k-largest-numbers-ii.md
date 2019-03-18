@@ -2,7 +2,7 @@
 description: 'https://www.lintcode.com/problem/top-k-largest-numbers-ii/description'
 ---
 
-# 545&606 Top k Largest Numbers II
+# 545&544 Top k Largest Numbers II
 
 
 
@@ -150,4 +150,63 @@ In array \[1,2,3,4,5\], the 1st largest element is 5, 2nd largest element is 4, 
 'priority\_queue' or 'quick select'
 
 
+
+Description
+
+Given an integer array, find the top _k_ largest numbers in it.Have you met this question in a real interview?  YesProblem Correction
+
+#### Example
+
+**Example1**
+
+```text
+Input: [3, 10, 1000, -99, 4, 100] and k = 3
+Output: [1000, 100, 10]
+```
+
+**Example2**
+
+```text
+Input: [8, 7, 6, 5, 4, 3, 2, 1] and k = 5
+Output: [8, 7, 6, 5, 4]
+
+```
+
+```cpp
+class Solution {
+public:
+
+    class Compare
+    {
+    public:
+        bool operator() (int& a, int& b){
+            return a > b;
+        }
+    };
+    
+    /**
+     * @param nums: an integer array
+     * @param k: An integer
+     * @return: the top k largest numbers in array
+     */
+    vector<int> topk(vector<int> &nums, int k) {
+        // write your code here
+        
+        vector<int> ret;
+        priority_queue<int,vector<int>,Compare> q;
+        
+        for (auto v : nums){
+            q.push(v);
+            while (q.size() > k){
+                q.pop();
+            }
+        }
+        
+        while(q.size() > 0){
+            ret.insert(ret.begin(),q.top()); q.pop();
+        }
+        return ret;
+    }
+};
+```
 
