@@ -95,13 +95,13 @@
 * [541 Zigzag Iterator II](data-structure/541.md)
 * [528. Flatten Nested List Iterator](data-structure/528.-flatten-nested-list-iterator.md)
 * [601 Flatten 2D Vector](data-structure/601-flatten-2d-vector.md)
-* [545 Top k Largest Numbers II](data-structure/545-top-k-largest-numbers-ii.md)
+* [545&606 Top k Largest Numbers II](data-structure/545-top-k-largest-numbers-ii.md)
 * [486 Merge K Sorted Arrays](data-structure/486-merge-k-sorted-arrays.md)
 * [471. Top K Frequent Words](data-structure/471.-top-k-frequent-words.md)
 * [124. Longest Consecutive Sequence](data-structure/124.-longest-consecutive-sequence.md)
 * [130 Heapify](data-structure/130-heapify.md)
 * [495. Implement Stack](data-structure/495.-implement-stack.md)
-* [134 LRU cache](data-structure/134-lru-cache.md)
+* [134 LRU cache && LFU cache](data-structure/134-lru-cache.md)
 
 ## BFS
 

@@ -1,4 +1,4 @@
-# 134 LRU cache
+# 134 LRU cache && LFU cache
 
 Description
 
@@ -86,5 +86,44 @@ public:
         }
     }
 };
+```
+
+LFU cache \(least frequently used\)
+
+
+
+#### Description
+
+中文English
+
+LFU \(Least Frequently Used\) is a famous cache eviction algorithm.
+
+For a cache with capacity _k_, if the cache is full and need to evict a key in it, the key with the lease frequently used will be kicked out.
+
+Implement `set` and `get` method for LFU cache.Have you met this question in a real interview?  YesProblem Correction
+
+#### Example
+
+Given `capacity=3`
+
+```text
+set(2,2)
+set(1,1)
+get(2)
+>> 2
+get(1)
+>> 1
+get(2)
+>> 2
+set(3,3)
+set(4,4)
+get(3)
+>> -1
+get(2)
+>> 2
+get(1)
+>> 1
+get(4)
+>> 4
 ```
 

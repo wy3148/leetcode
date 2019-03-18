@@ -104,3 +104,122 @@ public:
 };
 ```
 
+
+
+Go version
+
+```go
+/**
+ * @param s: an expression includes numbers, letters and brackets
+ * @return: a string
+ */
+ import(
+     "strconv"
+)
+ 
+func expressionExpand (s string) string {
+    // write your code here
+    
+    str :=[]byte(s)
+    var ret []byte
+    
+    i := 0
+    for i < len(str) {
+        
+        if str[i] >= 'a' && str[i] <= 'z' ||
+        str[i] >='A' && str[i] <='Z'{
+            ret = append(ret,str[i])
+            i++
+            continue
+        }else if str[i] >= '0' && str[i] <= '9'{
+            j := i + 1 
+            for j < len(str) && str[j] >= '0' && str[j] <= '9'{
+                j++
+            }
+            
+            repeat, _:= strconv.Atoi(string(str[i:j]))
+            
+            //stack to find the start, end position of []
+            for j < len(str){
+                if str[j] == '['{
+                    break
+                }
+                j++
+            }
+            
+            count := 1
+            j++
+            start := j
+            
+            for j < len(str){
+                if str[j]==']'{
+                    count--
+                }else if str[j]=='['{
+                    count++
+                }
+                if count == 0{
+                    break
+                }else{
+                    j++
+                }
+            }
+            
+            newstr  := expressionExpand(string(str[start:j]))
+            var tmpStr string
+            for repeat > 0{
+                tmpStr += newstr
+                repeat--
+            }
+            
+            ret  = append(ret,[]byte(tmpStr)...)
+            
+            //move i postion to next character of ']'
+            i = j + 1
+            continue
+        }else if str[i] =='['{
+            //special case [abcd]xyx , no number in front
+            //means, no repat
+            j := i + 1 
+            count := 1 
+            for j < len(str){
+                if str[j] == ']'{
+                    count--
+                }else if str[j] == '['{
+                    count++
+                }
+                
+                if count == 0{
+                    break
+                }else{
+                    j++
+                }
+            }
+            
+            i = j + 1 
+            continue
+        }
+    }
+    return string(ret)
+}
+
+```
+
+in general, there are two different ways about loop,
+
+```text
+be noticed that
+two different ways about loop
+
+for i := 0; i < len(str); i++{
+
+			i = j;
+}
+in this way, the next loop, 'i' will be j + 1 
+
+for i < len(str){
+	i = j;
+	i++ //we have to call it manually 
+}
+
+```
+
