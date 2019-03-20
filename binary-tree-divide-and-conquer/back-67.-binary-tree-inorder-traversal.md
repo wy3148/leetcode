@@ -114,3 +114,38 @@ func inorderTraversal (root *TreeNode) []int {
 
 ```
 
+better version
+
+```go
+/**
+ * Definition for a binary tree node.
+ * type TreeNode struct {
+ *     Val int
+ *     Left *TreeNode
+ *     Right *TreeNode
+ * }
+ */
+
+/**
+ * @param root: A Tree
+ * @return: Inorder in ArrayList which contains node values.
+ */
+
+func helper(ret *[]int, root *TreeNode){
+    if root == nil{
+        return
+    }
+    helper(ret, root.Left)
+    (*ret) = append((*ret),root.Val)
+    helper(ret,root.Right)
+}
+
+func inorderTraversal (root *TreeNode) []int {
+    // write your code here
+    ret := make([]int,0)
+    helper(&ret,root)
+    return ret
+}
+
+```
+
