@@ -27,6 +27,7 @@
 
 ## Binary tree, Divide and Conquer
 
+* [596 minimum subtree](binary-tree-divide-and-conquer/596-minimum-subtree.md)
 * [597 Subtree with Maximum Average](binary-tree-divide-and-conquer/597.md)
 * [480 binary tree path](binary-tree-divide-and-conquer/untitled.md)
 * [453 453. Flatten Binary Tree to Linked List](binary-tree-divide-and-conquer/453-453.-flatten-binary-tree-to-linked-list.md)
