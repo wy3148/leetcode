@@ -73,6 +73,8 @@ func inorderTraversal (root *TreeNode) []int {
 
 using the 'stack', we can also traverse the binary tree in order.
 
+![](../.gitbook/assets/autodraw-20_03_2019.png)
+
 ```cpp
 /**
  * Definition for a binary tree node.
