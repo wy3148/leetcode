@@ -76,6 +76,64 @@ II LCA II
 
 each node has parent node,
 
+![](../.gitbook/assets/autodraw-21_03_2019-1.png)
+
+```cpp
+/**
+ * Definition of ParentTreeNode:
+ * class ParentTreeNode {
+ * public:
+ *     int val;
+ *     ParentTreeNode *parent, *left, *right;
+ * }
+ */
+
+
+class Solution {
+public:
+    int depth(ParentTreeNode* node){
+        int d = 0;
+        while(node != nullptr){
+            node = node->parent;
+            d++;
+        }
+        return d;
+    }
+    
+    /*
+     * @param root: The root of the tree
+     * @param A: node in the tree
+     * @param B: node in the tree
+     * @return: The lowest common ancestor of A and B
+     */
+    ParentTreeNode * lowestCommonAncestorII(ParentTreeNode * root, ParentTreeNode * A, ParentTreeNode * B) {
+        // write your code here
+        if (root == nullptr || root == A || root == B) return root;
+        
+        int aDepth = depth(A);
+        int bDepth = depth(B);
+        
+        ParentTreeNode* n1 = A;
+        ParentTreeNode* n2 = B;
+        
+        while( aDepth > bDepth){
+            n1 = n1->parent;
+            aDepth--;
+        }
+        while(aDepth < bDepth){
+            n2 = n2->parent;
+            bDepth--;
+        }
+        
+        while (n1 != n2){
+            n1 = n1->parent;
+            n2 = n2->parent;
+        }
+        return n1;
+    }
+};
+```
+
 #### Description
 
 中文English

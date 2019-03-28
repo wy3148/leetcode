@@ -30,6 +30,8 @@ Can you do it without recursion?
 
 [66. Binary Tree Preorder Traversal](https://www.lintcode.com/problem/binary-tree-preorder-traversal)
 
+![](../.gitbook/assets/autodraw-21_03_2019.png)
+
 ```text
 /**
  * Definition of TreeNode:
