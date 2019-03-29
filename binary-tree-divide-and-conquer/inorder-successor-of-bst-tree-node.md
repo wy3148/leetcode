@@ -135,3 +135,60 @@ public:
 };
 ```
 
+another way, during the process of inorder traverse, we record the 'resulType' 
+
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+
+
+class Solution {
+public:
+
+    struct Result{
+        TreeNode* successor;
+        bool found ;
+        Result(TreeNode* n, bool f){
+            successor = n;
+            found = f;
+        }
+    };
+
+    void inorder(TreeNode* root, TreeNode* p,Result& r ){
+        if (root  == nullptr) return;
+        
+        inorder(root->left,p,r);
+        
+        //only when the p is found ,and successor
+        //is still null, we set the successor now
+        if (r.found && r.successor == nullptr){
+            r.successor = root;
+            return;
+        }else if(root == p){
+            r.found = true;
+        }
+        
+        inorder(root->right,p,r);
+    }
+    
+    /*
+     * @param root: The root of the BST.
+     * @param p: You need find the successor node of p.
+     * @return: Successor of p.
+     */
+    TreeNode * inorderSuccessor(TreeNode * root, TreeNode * p) {
+        // write your code here
+        Result r(nullptr,false);
+        inorder(root,p,r);
+        return r.successor;
+    }
+};
+```
+
