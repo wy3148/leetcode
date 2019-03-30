@@ -1,3 +1,7 @@
+---
+description: lintcode 615/616/696(hard)
+---
+
 # Course Schedule I and II
 
 
@@ -163,4 +167,61 @@ public:
     }
 };
 ```
+
+**Topology sort**
+
+```cpp
+class Solution {
+public:
+    /*
+     * @param numCourses: a total of n courses
+     * @param prerequisites: a list of prerequisite pairs
+     * @return: the course order
+     */
+    vector<int> findOrder(int numCourses, vector<pair<int, int>> &prerequisites) {
+        // write your code here
+        
+        vector<int> ret;
+         vector<int> empty;
+        // course prerequisites
+        map<int, set<int> > cond; 
+        
+        // course learned ==> can learn course
+        map<int,set<int>> courseRecord; 
+        
+        for (auto p : prerequisites){
+            cond[p.first].insert(p.second);
+            courseRecord[p.second].insert(p.first);
+        }
+        
+        queue<int> q;
+        for (int i = 0; i < numCourses; i++){
+            if (cond.find(i) == cond.end()){
+                q.push(i);
+            }
+        }
+        
+        while(!q.empty()){
+            int course = q.front(); q.pop();
+            ret.push_back(course);
+            
+            if (courseRecord.find(course) != courseRecord.end()){
+                for( auto v : courseRecord[course]){
+                    if (cond.find(v) != cond.end()){
+                        cond[v].erase(course);
+                        if (cond[v].size() == 0){
+                            q.push(v);
+                        }
+                    }
+                }
+            }
+        }
+        return ret.size() == numCourses ? ret : empty;
+    }
+};
+```
+
+![](../.gitbook/assets/autodraw-30_03_2019.png)
+
+
 
