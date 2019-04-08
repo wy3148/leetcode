@@ -123,6 +123,8 @@
 * [127 topological-sorting](bfs/127-topological-sorting.md)
 * [120/121 world ladder I, II](bfs/120-world-ladder.md)
 * [7. Serialize and Deserialize Binary Tree](bfs/7.-serialize-and-deserialize-binary-tree.md)
+* [605. Sequence Reconstruction](bfs/605.-sequence-reconstruction.md)
+* [6 degrees](bfs/6-degrees.md)
 
 ## DFS
 
