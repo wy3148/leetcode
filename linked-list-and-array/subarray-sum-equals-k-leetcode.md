@@ -53,3 +53,41 @@ func subarraySum(nums []int, k int) int {
 }
 ```
 
+There is O\(n\) solution,
+
+using hashmap to record the all the calculated presum,
+
+```cpp
+class Solution {
+public:
+    /**
+     * @param nums: a list of integer
+     * @param k: an integer
+     * @return: return an integer, denote the number of continuous subarrays whose sum equals to k
+     */
+    int subarraySumEqualsK(vector<int> &nums, int k) {
+        // write your code here
+        
+        if (nums.size() == 0) return 0;
+        
+        map<int,int> sumData;
+        int count = 0;
+        int tmp = 0;
+        
+        //current sumarray sum val = k
+        sumData[0]= 1; 
+        
+        for(int i = 0; i < nums.size(); i++){
+            tmp += nums[i];
+            count += sumData[tmp - k];
+            
+            sumData[tmp]++; // put current subarray
+            //sum into the hashmap
+        }
+        return count;
+    }
+};
+```
+
+
+
