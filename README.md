@@ -1,16 +1,18 @@
+# lintcode
+
 Algorithm and data structures
 
-# Table of contents
+## Table of contents
 
-* [lintcode](README.md)
+* [lintcode](./)
 
-## Basic coding style
+### Basic coding style
 
 * [strstr](basic-coding-style/strstr.md)
 * [Permutations](basic-coding-style/15.-permutations.md)
 * [Permutations II](basic-coding-style/permutations-ii.md)
 
-## Binary search
+### Binary search
 
 * [2D matrix search](binary-search/2d-matrix-search.md)
 * [612 K-Closest Points](binary-search/612.k-closest-points.md)
@@ -28,11 +30,11 @@ Algorithm and data structures
 * [61 Search for a Range](binary-search/61-search-for-a-range.md)
 * [600 Smallest Rectangle Enclosing Black Pixels](binary-search/600-smallest-rectangle-enclosing-black-pixels.md)
 
-## Binary tree, Divide and Conquer
+### Binary tree, Divide and Conquer
 
 * [596 minimum subtree](binary-tree-divide-and-conquer/596-minimum-subtree.md)
 * [597 Subtree with Maximum Average](binary-tree-divide-and-conquer/597.md)
-* [480 binary tree path](binary-tree-divide-and-conquer/untitled.md)
+* [480 binary tree path](https://github.com/wy3148/leetcode/tree/dd5f65b893b8462f281f28bdce4f5faaea532b25/binary-tree-divide-and-conquer/untitled.md)
 * [453 453. Flatten Binary Tree to Linked List](binary-tree-divide-and-conquer/453-453.-flatten-binary-tree-to-linked-list.md)
 * [97 Maximum Depth Of binary tree](binary-tree-divide-and-conquer/97-maximum-depth-of-binary-tree.md)
 * [93. Balanced Binary Tree](binary-tree-divide-and-conquer/93.-balanced-binary-tree.md)
@@ -48,7 +50,7 @@ Algorithm and data structures
 * [437. Copy Books](binary-tree-divide-and-conquer/437.-copy-books.md)
 * [Binary tree maximum path sum](binary-tree-divide-and-conquer/binary-tree-maximum-path-sum.md)
 
-## Linked List & Array
+### Linked List & Array
 
 * [599. Insert into a Cyclic Sorted List](linked-list-and-array/599.-insert-into-a-cyclic-sorted-list.md)
 * [165. Merge Two Sorted Lists](linked-list-and-array/untitled-1.md)
@@ -67,7 +69,7 @@ Algorithm and data structures
 * [547&548 intersection of array](linked-list-and-array/547-and-548-intersection-of-array.md)
 * [96 partition list](linked-list-and-array/96-partition-list.md)
 
-## two pointers
+### two pointers
 
 * [two pointers template](two-pointers/two-pointers-template.md)
 * [604 window sum](two-pointers/604-window-sum.md)
@@ -89,7 +91,7 @@ Algorithm and data structures
 * [Kth smallest element in un-sorted array](two-pointers/kth-smallest-element-in-un-sorted-array.md)
 * [58 4sum](two-pointers/58-4sum.md)
 
-## Data structure
+### Data structure
 
 * [128 hash function](data-structure/hash-function.md)
 * [129 rehashing](data-structure/rehashing.md)
@@ -110,7 +112,7 @@ Algorithm and data structures
 * [134 LRU cache && LFU cache](data-structure/134-lru-cache.md)
 * [495. Implement Stack](data-structure/495.-implement-stack.md)
 
-## BFS
+### BFS
 
 * [433 Number of Islands I, II](bfs/433-number-of-islands.md)
 * [69 Binary Tree Level Order](bfs/69-binary-tree-level-order.md)
@@ -128,7 +130,7 @@ Algorithm and data structures
 * [605. Sequence Reconstruction](bfs/605.-sequence-reconstruction.md)
 * [6 degrees](bfs/6-degrees.md)
 
-## DFS
+### DFS
 
 * [135. Combination Sum I, II](dfs/135.-combination-sum-i-ii.md)
 * [17 subset I II](dfs/17-subset-i-ii.md)
@@ -137,5 +139,4 @@ Algorithm and data structures
 * [107. Word Break](dfs/107.-word-break.md)
 * [string permuation](dfs/string-permuation.md)
 * [next permutation](dfs/next-permutation.md)
-
 

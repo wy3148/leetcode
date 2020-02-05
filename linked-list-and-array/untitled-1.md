@@ -58,8 +58,7 @@ Example 2:
         return dummpyHead.next;
 ```
 
-{% code-tabs %}
-{% code-tabs-item title="Golang" %}
+{% code title="Golang" %}
 ```text
 /**
  * Definition for singly-linked list.
@@ -110,6 +109,5 @@ func mergeTwoLists (l1 *ListNode, l2 *ListNode) *ListNode {
 }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 

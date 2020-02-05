@@ -8,11 +8,11 @@ Note:
 
 all the binary tree path, should be the basic of dfs
 
-#### Description
+## Description
 
-Given a binary tree, return all root-to-leaf paths.Have you met this question in a real interview?  YesProblem Correction
+Given a binary tree, return all root-to-leaf paths.Have you met this question in a real interview? YesProblem Correction
 
-#### Example
+## Example
 
 Example 1:
 
@@ -42,7 +42,7 @@ Input:
    1
  /   
 2     
- 
+
 
 Output:
 
@@ -50,7 +50,6 @@ Output:
 [
   "1->2"
 ]
-
 ```
 
 ```cpp
@@ -72,13 +71,13 @@ public:
 
     void dfs(TreeNode* node, vector<string>& res, string cur){
         if (node == nullptr) return;
-        
+
         if (cur.length() == 0){
             cur += to_string(node->val);
         }else{
             cur += "->" + to_string(node->val);
         }
-        
+
         if (node->left == nullptr && node->right == nullptr){
             res.push_back(cur);
         }
