@@ -130,5 +130,5 @@
 ## segment tree
 
 * [307. Range Sum Query - Mutable](segment-tree/307.-range-sum-query-mutable.md)
-* [Untitled](segment-tree/untitled.md)
+* [315. Count of Smaller Numbers After Self](segment-tree/untitled.md)
 
